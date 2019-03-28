@@ -1,0 +1,1 @@
+[{"t":8.147,"c":[{"t":"Just got a whisper. V3nom6 : lets hope its Kanye's body. lol"}],"n":"Whitegeo","b":[{"i":"subscriber","v":"0"}]},{"t":12.904,"c":[{"t":"hahaha"}],"n":"Whitegeo","b":[{"i":"subscriber","v":"0"}]},{"t":13.915,"c":[{"t":"FUCK"}],"n":"deadmau5","b":[{"i":"subscriber","v":"0"},{"i":"turbo","v":"1"}],"s":"FF4500"}]
