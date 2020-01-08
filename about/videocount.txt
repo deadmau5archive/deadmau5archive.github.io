@@ -1,1 +1,1 @@
-{"twitch":874,"mixer":30}
+{"twitch":874,"mixer":38}
