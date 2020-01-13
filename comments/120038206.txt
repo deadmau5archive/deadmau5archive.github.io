@@ -1,1 +1,0 @@
-[{"t":19.339,"c":[{"t":"Welcome to the Horde!! "},{"a":"xanHY","e":"11301"},{"t":" "},{"a":"xanPE","e":"11302"}],"n":"XanBot","b":[{"i":"moderator","v":"1"},{"i":"turbo","v":"1"}],"s":"DAA520"}]

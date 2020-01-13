@@ -1,1 +1,0 @@
-var chat;window.onload=function(){(chat=document.getElementById("chat")).innerHTML='<img src="/media/loading.gif" height="18px"> Loading...';var a=chat.dataset.chattype,t=new URL(window.location.href).searchParams.get("v");null!=t?displayChat(t.trim(),chat,!0,a):window.location.href="/page?p=1"};
