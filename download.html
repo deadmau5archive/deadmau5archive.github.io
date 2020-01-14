@@ -1,0 +1,59 @@
+<style>
+body {
+	font-family: Arial, sans-serif;
+}
+</style>
+<body>
+	<b>Current VOD mp4 links:</b>
+	<br>
+	<br>
+	<div id="a">Loading...</div>
+	<br>
+	<br>
+	<i>right click -> save as</i>
+</body>
+<script>
+
+//https://stackoverflow.com/questions/1322732/convert-seconds-to-hh-mm-ss-with-javascript
+var toHHMMSS = (secs) => {
+    var sec_num = parseInt(secs, 10)
+    var hours   = Math.floor(sec_num / 3600)
+    var minutes = Math.floor(sec_num / 60) % 60
+    var seconds = sec_num % 60
+
+    return [hours,minutes,seconds]
+        .map(v => v < 10 ? "0" + v : v)
+        .filter((v,i) => v !== "00" || i > 0)
+        .join(":")
+}
+
+function reqListener () {
+	console.log(this.response);
+	var a = document.getElementById("a");
+	var str = "";
+	for (var vod of this.response) {
+		//console.log(vod);
+		var mp4 = "";
+		
+		for (var cl of vod.contentLocators) {
+			if (cl.locatorType == "Download") {
+				mp4 = cl.uri;
+			}
+		}
+		
+		var name = (vod.uploadDate.substring(0,10));
+		str += '<a href="'+mp4+'" target="_blank">';
+		str += name+"&emsp;&ndash;&emsp;";
+		str += toHHMMSS(vod.durationInSeconds)+" ";
+		str += "</a><br>";
+	}
+	a.innerHTML = str;
+}
+
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.responseType = "json";
+oReq.open("GET", "https://mixer.com/api/v2/vods/channels/118130430");
+oReq.send();
+
+</script>
