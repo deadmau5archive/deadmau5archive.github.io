@@ -1,0 +1,1 @@
+[{"t":18.862,"c":[{"t":"just went up"}],"n":"loss_minn","b":[{"i":"subscriber","v":"0"}],"s":"FF0000"}]
