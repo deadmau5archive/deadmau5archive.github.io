@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	<link rel="stylesheet" href="/media/style_mixer.css">
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="videpagecontainer">
 		<div class="navbox">
@@ -79,8 +85,11 @@
 	</div>
 </div>
 <script src="/media/chat.js" type="text/javascript"></script>
-<div id="player_chat"><div id="chat" data-id="WBt15sFteUS2d8LOTY_bRA" data-chattype="mixer" data-offset="0">Loading...</div></div>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat" data-id="WBt15sFteUS2d8LOTY_bRA" data-p="0" data-np="1" data-chattype="mixer" data-offset="0">Loading...</div></div>
 <div class="postdesc">
+<b>Community tags</b> (public)<br>
+<div id="videotags"></div><br>
 <b>Songs removed to prevent YouTube block:</b><br><a class="shade" href="?t=9697" onclick="return jumpTo(9697);">2:41:37</a> - <a class="shade" href="?t=9908" onclick="return jumpTo(9908);">2:45:08</a>&ensp;white feather (unreleased) - deadmau5 (mau5trap Recordings)<br><br><b>Songs in this video</b> (recognized via YouTube Content ID):<br><a class="shade" href="?t=982" onclick="return jumpTo(982);">16:22</a> - <a class="shade" href="?t=1075" onclick="return jumpTo(1075);">17:55</a>&ensp;Three Pound Chicken Wing - deadmau5 (mau5trap Recordings Limited)<br><a class="shade" href="?t=1080" onclick="return jumpTo(1080);">18:00</a> - <a class="shade" href="?t=1272" onclick="return jumpTo(1272);">21:12</a>&ensp;Maths - Original Mix - deadmau5 (Ultra Records)<br><a class="shade" href="?t=1267" onclick="return jumpTo(1267);">21:07</a> - <a class="shade" href="?t=1493" onclick="return jumpTo(1493);">24:53</a>&ensp;No Problem - deadmau5 (mau5trap Recordings Limited)<br><br><div class="links">
 			<a href="https://www.youtube.com/watch?v=R7x__7fWBgI" target="_blank" class="btn"><img src="/media/yt.png" class="icon"> Watch on YouTube</a>
 			<a href="https://mixer.com/deadmau5?vod=WBt15sFteUS2d8LOTY_bRA" target="_blank" class="btn disabled" onclick="return false;"><img src="/media/mixer.png" class="icon"> Watch on Mixer (original)</a>

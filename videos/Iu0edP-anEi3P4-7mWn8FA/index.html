@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	<link rel="stylesheet" href="/media/style_mixer.css">
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="videpagecontainer">
 		<div class="navbox">
@@ -79,8 +85,11 @@
 	</div>
 </div>
 <script src="/media/chat.js" type="text/javascript"></script>
-<div id="player_chat"><div id="chat" data-id="Iu0edP-anEi3P4-7mWn8FA" data-chattype="mixer" data-offset="0">Loading...</div></div>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat" data-id="Iu0edP-anEi3P4-7mWn8FA" data-p="0" data-np="1" data-chattype="mixer" data-offset="0">Loading...</div></div>
 <div class="postdesc">
+<b>Community tags</b> (public)<br>
+<div id="videotags"></div><br>
 <b>Songs removed to prevent YouTube block:</b><br><a class="shade" href="?t=5751" onclick="return jumpTo(5751);">1:35:51</a> - <a class="shade" href="?t=5785" onclick="return jumpTo(5785);">1:36:25</a>&ensp;Arcadia (unreleased) - deadmau5 (mau5trap Recordings Ltd)<br><a class="shade" href="?t=5971" onclick="return jumpTo(5971);">1:39:31</a> - <a class="shade" href="?t=6026" onclick="return jumpTo(6026);">1:40:26</a>&ensp;Arcadia (unreleased) - deadmau5 (mau5trap Recordings Ltd)<br><a class="shade" href="?t=11022" onclick="return jumpTo(11022);">3:03:42</a> - <a class="shade" href="?t=11102" onclick="return jumpTo(11102);">3:05:02</a>&ensp;Arcadia (unreleased) - deadmau5 (mau5trap Recordings Ltd)<br><a class="shade" href="?t=13206" onclick="return jumpTo(13206);">3:40:06</a> - <a class="shade" href="?t=13255" onclick="return jumpTo(13255);">3:40:55</a>&ensp;white feather (unreleased) - deadmau5 (mau5trap Recordings)<br><a class="shade" href="?t=13596" onclick="return jumpTo(13596);">3:46:36</a> - <a class="shade" href="?t=13625" onclick="return jumpTo(13625);">3:47:05</a>&ensp;white feather (unreleased) - deadmau5 (mau5trap Recordings)<br><br><b>Songs in this video</b> (recognized via YouTube Content ID):<br><a class="shade" href="?t=2736" onclick="return jumpTo(2736);">45:36</a> - <a class="shade" href="?t=2787" onclick="return jumpTo(2787);">46:27</a>&ensp;When The Summer Dies - deadmau5, lights (mau5trap recordings Ltd)<br><a class="shade" href="?t=5334" onclick="return jumpTo(5334);">1:28:54</a> - <a class="shade" href="?t=5580" onclick="return jumpTo(5580);">1:33:00</a>&ensp;When The Summer Dies (Alternative Mix) - deadmau5 & Lights (mau5trap Recordings Ltd)<br><a class="shade" href="?t=14599" onclick="return jumpTo(14599);">4:03:19</a> - <a class="shade" href="?t=14636" onclick="return jumpTo(14636);">4:03:56</a>&ensp;Hit Save (unreleased) - deadmau5 (mau5trap recordings limited)<br><br><div class="links">
 			<a href="https://www.youtube.com/watch?v=kObsYFfHzDM" target="_blank" class="btn"><img src="/media/yt.png" class="icon"> Watch on YouTube</a>
 			<a href="https://mixer.com/deadmau5?vod=Iu0edP-anEi3P4-7mWn8FA" target="_blank" class="btn disabled" onclick="return false;"><img src="/media/mixer.png" class="icon"> Watch on Mixer (original)</a>

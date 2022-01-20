@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>deadmau5 stream archive</title>
+	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+	
+	<link rel="icon" type="image/png" href="/media/favicon.png" />
+</head>
+
+<body>
+	<div>
+		<div class="titlebox img">
+			<img src="/media/profile.jpg" />
+		</div><div class="titlebox spacing bgsmall">
+			<img class="titleimg" src="/media/title1.png" alt="deadmau5" />
+		</div><div class="titlebox">
+			<img class="titleimg" src="/media/title2.png" alt="stream" />
+		</div><div class="titlebox">
+			<img class="titleimg" src="/media/title3.png" alt="archive" />
+		</div><div class="titlebox spacing headerlinks">
+	<div>
+		<a class="shade" target="_blank" href="https://www.twitch.tv/deadmau5"><img src="/media/twitch.png" /> Twitch</a>
+		<a class="shade" target="_blank" href="/media/facebook-gaming-kekw.png"><img src="/media/mixer.png" /> Mixer</a>
+		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
+	</div>
+</div>
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
+		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
+	</div>
+</div>
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
+	</div>
+	<div class="listingcontainer">
+		<div class="navbox">
+			<a href="/page?p=1" class="btn">Browse videos</a>
+			<div class="pullright">
+				
+			</div>
+			<div class="clear"></div>
+		</div>
+		<noscript>
+<h1>Not found</h1>
+<p>The page was not found or you could not be redirected because JavaScript is not enabled.</p>
+</noscript>
+
+<div id="notFoundMessage"></div>
+
+<script src="/media/routes.js"></script>
+<script>
+
+var path = window.location.pathname;
+var search = window.location.search;
+
+getRoute(path, search, (route) => {
+	var msg = "";
+	if (route == null) {
+		msg = '<h1>Not found</h1> <p>No route found for <i>'+escapeHtml(path + search)+'</i></p>';
+	} else {
+		window.location.href = route;
+		msg = 'redirecting... click <a class="shade" href="'+route+'">here</a> if you\'re not automatically redirected';
+	}
+	document.getElementById("notFoundMessage").innerHTML = msg;
+});
+
+</script>
+
+
+	</div>
+</body>
+</html>

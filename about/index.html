@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="listingcontainer">
 		<div class="navbox">
@@ -64,16 +70,59 @@
 	<br>
 </span>
 
+<h3>Link conversion guide</h3>
+<br>
+This page is designed to easily be able to convert URLs of stream VODs or videos into a link to the respective video page on the archive, if it exists.<br>
+To convert a link you have, simply replace the domain name with <i>deadmau5archive.github.io</i>.<br>
+<br>
+<b>Examples:</b>
+<style>
+.linkconversiontable td{
+padding-right: 16px;
+}
+</style>
+<table class="linkconversiontable">
+	<tr>
+		<td><i>Twitch:</i></td>
+		<td>https://<span style="color:#ffcccc;">www.twitch.tv</span>/videos/378090826</td>
+		<td>&#8594;</td>
+		<td>https://<span style="color:#ccffcc;">deadmau5archive.github.io</span>/videos/378090826</td>
+	</tr>
+	<tr>
+		<td><i>Mixer:</i></td>
+		<td>https://<span style="color:#ffcccc;">mixer.com</span>/deadmau5?vod=5KxZ7vVfw02kMD6WxqdndQ</td>
+		<td>&#8594;</td>
+		<td>https://<span style="color:#ccffcc;">deadmau5archive.github.io</span>/deadmau5?vod=5KxZ7vVfw02kMD6WxqdndQ</td>
+	</tr>
+	<tr>
+		<td><i>YouTube:</i></td>
+		<td>https://<span style="color:#ffcccc;">www.youtube.com</span>/watch?v=Z1t8e2jpuOI</td>
+		<td>&#8594;</td>
+		<td>https://<span style="color:#ccffcc;">deadmau5archive.github.io</span>/watch?v=Z1t8e2jpuOI</td>
+	</tr>
+	<tr>
+		<td><i>youtu.be:</i></td>
+		<td>https://<span style="color:#ffcccc;">youtu.be</span>/Z1t8e2jpuOI</td>
+		<td>&#8594;</td>
+		<td>https://<span style="color:#ccffcc;">deadmau5archive.github.io</span>/Z1t8e2jpuOI</td>
+	</tr>
+
+</table>
+<br>
+<i>Some links may redirect to another page within the archive. <br>
+deadmau5 never streamed on YouTube but what I mean by converting YouTube links is that when you have a YouTube link to a video from the archive channel, you can use this to get to the respective archive video page.</i> <br>
+<br>
+
 <h3>Usage etiquette</h3>
 <br>
 <b>Rips disclaimer</b><br>
-Please do not create rips from these streams and upload WIPs to your own youtube channel (or even monetize them <img title="NotLikeThis" src="https://i.imgur.com/GXEjhcw.png" height="18px" style="vertical-align:bottom;"></img>)<br>
+Please do not create rips from these streams and upload WIPs to your own youtube channel (or even monetize them <img title="NotLikeThis" src="/media/notlikethis.png" height="18px" style="vertical-align:bottom;"></img>)<br>
 Joel has repeatedly asked the community to not do that (<a href="https://www.reddit.com/r/deadmau5/comments/eo54a1/" target="_blank" class="shade">see here</a>) and I urge you to please respect this.<br>
 Also, it's really not worth it anyway because mau5trap does actively scan YouTube for stream rips and takes them down, and the same will happen to you.<br><br>
 
 <div style="background: #36393f; color: #fff;padding: 10px;display: inline-block;border-radius: 10px;">
 <div style="display: inline-block;margin-right: 10px;">
-<img src="https://i.imgur.com/VAzUNa8.png" style="height: 50px;">
+<img src="/media/joel.png" style="height: 50px;">
 </div>
 <div style="display: inline-block;">
 <b style="color: #f33;">REMEMBER</b><br>
@@ -143,10 +192,14 @@ My uploads are never and will never be monetized. If ads are displayed to you, t
 None of this money goes to me. It is not my intent to profit off of this, i just want to archive this content and make it available to those that are interested.<br>
 
 <br>
-<h3>Latest refresh</h3>
+<h3>Updates &amp; Changelog</h3>
 <br>
-The whole website was last built at <i>2021-09-21 21:28:37 UTC</i>.<br>
+<b>Latest refresh</b><br>
+The whole website was last built at <i>2022-01-20 03:15:21 UTC</i>.<br>
 You can check the page history on the project's <a target="_blank" href="https://github.com/deadmau5archive/deadmau5archive.github.io/commits/master" class="shade">Github page</a>.<br>
+<br>
+<b>Changelog</b><br>
+There isn't a definitve changelog but your best bet is probably to join the <a target="_blank" href="https://discord.gg/bQ3P9d6XUt" class="shade">discord</a> and have a look at the <a target="_blank" href="https://discord.com/channels/725715353879183380/801156934904053810/801161450076110908" class="shade">#site-blog</a> channel.<br>
 
 <br><br>
 	</div>

@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	<link rel="stylesheet" href="/media/style_mixer.css">
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="videpagecontainer">
 		<div class="navbox">
@@ -85,8 +91,11 @@
 	</div>
 </div>
 <script src="/media/chat.js" type="text/javascript"></script>
-<div id="player_chat"><div id="chat" data-id="hHB0GIyXCkKzYwSoG5z11A" data-chattype="mixer" data-offset="0">Loading...</div></div>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat" data-id="hHB0GIyXCkKzYwSoG5z11A" data-p="0" data-np="1" data-chattype="mixer" data-offset="0">Loading...</div></div>
 <div class="postdesc">
+<b>Community tags</b> (public)<br>
+<div id="videotags"></div><br>
 <b>Songs removed to prevent YouTube block:</b><br><a class="shade" href="?t=5333" onclick="return jumpTo(5333);">1:28:53</a> - <a class="shade" href="?t=5456" onclick="return jumpTo(5456);">1:30:56</a>&ensp;Jasco - Sepultura (Roadrunner Records)<br><br><b>Songs in this video</b> (recognized via YouTube Content ID):<br><a class="shade" href="?t=5044" onclick="return jumpTo(5044);">1:24:04</a> - <a class="shade" href="?t=5330" onclick="return jumpTo(5330);">1:28:50</a>&ensp;Alias - In Flames (Nuclear Blast)<br><a class="shade" href="?t=5044" onclick="return jumpTo(5044);">1:24:04</a> - <a class="shade" href="?t=5330" onclick="return jumpTo(5330);">1:28:50</a>&ensp;Alias - In Flames (Nuclear Blast)<br><a class="shade" href="?t=5451" onclick="return jumpTo(5451);">1:30:51</a> - <a class="shade" href="?t=5755" onclick="return jumpTo(5755);">1:35:55</a>&ensp;Bloom - Radiohead (XL Recordings)<br><a class="shade" href="?t=5452" onclick="return jumpTo(5452);">1:30:52</a> - <a class="shade" href="?t=5749" onclick="return jumpTo(5749);">1:35:49</a>&ensp;Bloom - Radiohead (XL Recordings)<br><a class="shade" href="?t=6444" onclick="return jumpTo(6444);">1:47:24</a> - <a class="shade" href="?t=6616" onclick="return jumpTo(6616);">1:50:16</a>&ensp;Long Time Lie - Depeche Mode (Columbia)<br><a class="shade" href="?t=6444" onclick="return jumpTo(6444);">1:47:24</a> - <a class="shade" href="?t=6616" onclick="return jumpTo(6616);">1:50:16</a>&ensp;Long Time Lie - Depeche Mode (Columbia)<br><a class="shade" href="?t=7179" onclick="return jumpTo(7179);">1:59:39</a> - <a class="shade" href="?t=7410" onclick="return jumpTo(7410);">2:03:30</a>&ensp;Uprock And Invigorate (A Prefuse/Dabrye Production) - Prefuse 73 (Warp)<br><a class="shade" href="?t=7181" onclick="return jumpTo(7181);">1:59:41</a> - <a class="shade" href="?t=7410" onclick="return jumpTo(7410);">2:03:30</a>&ensp;Uprock And Invigorate (A Prefuse/Dabrye Production) - Prefuse 73 (Warp)<br><a class="shade" href="?t=7590" onclick="return jumpTo(7590);">2:06:30</a> - <a class="shade" href="?t=7805" onclick="return jumpTo(7805);">2:10:05</a>&ensp;Go! Spastic - Squarepusher (Warp)<br><a class="shade" href="?t=7590" onclick="return jumpTo(7590);">2:06:30</a> - <a class="shade" href="?t=7805" onclick="return jumpTo(7805);">2:10:05</a>&ensp;Go! Spastic - Squarepusher (Warp)<br><a class="shade" href="?t=7803" onclick="return jumpTo(7803);">2:10:03</a> - <a class="shade" href="?t=7952" onclick="return jumpTo(7952);">2:12:32</a>&ensp;St Epreo - Autechre (Warp)<br><a class="shade" href="?t=7803" onclick="return jumpTo(7803);">2:10:03</a> - <a class="shade" href="?t=7952" onclick="return jumpTo(7952);">2:12:32</a>&ensp;St Epreo - Autechre (Warp)<br><a class="shade" href="?t=7943" onclick="return jumpTo(7943);">2:12:23</a> - <a class="shade" href="?t=8083" onclick="return jumpTo(8083);">2:14:43</a>&ensp;Turquoise Hexagon Sun - Boards of Canada (Warp)<br><a class="shade" href="?t=7944" onclick="return jumpTo(7944);">2:12:24</a> - <a class="shade" href="?t=8083" onclick="return jumpTo(8083);">2:14:43</a>&ensp;Turquoise Hexagon Sun - Boards of Canada (Warp)<br><a class="shade" href="?t=26317" onclick="return jumpTo(26317);">7:18:37</a> - <a class="shade" href="?t=26342" onclick="return jumpTo(26342);">7:19:02</a>&ensp;Heater - Samim (Ultra Records)<br><a class="shade" href="?t=26317" onclick="return jumpTo(26317);">7:18:37</a> - <a class="shade" href="?t=26342" onclick="return jumpTo(26342);">7:19:02</a>&ensp;Heater - Samim (Ultra Records)<br><br><div class="links">
 			<a href="https://www.youtube.com/watch?v=ubx5yl_5NLY" target="_blank" class="btn"><img src="/media/yt.png" class="icon"> Watch on YouTube</a>
 			<a href="https://mixer.com/deadmau5?vod=hHB0GIyXCkKzYwSoG5z11A" target="_blank" class="btn disabled" onclick="return false;"><img src="/media/mixer.png" class="icon"> Watch on Mixer (original)</a>

@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	<link rel="stylesheet" href="/media/style_mixer.css">
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="videpagecontainer">
 		<div class="navbox">
@@ -79,9 +85,12 @@
 	</div>
 </div>
 <script src="/media/chat.js" type="text/javascript"></script>
-<div id="player_chat"><div id="chat" data-id="c1L0p9QsL0SCvgncvM-axw" data-chattype="mixer" data-offset="0">Loading...</div></div>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat" data-id="c1L0p9QsL0SCvgncvM-axw" data-p="0" data-np="1" data-chattype="mixer" data-offset="0">Loading...</div></div>
 <div class="postdesc">
-<b>Songs in this video</b> (recognized via YouTube Content ID):<br><a class="shade" href="?t=735" onclick="return jumpTo(735);">12:15</a> - <a class="shade" href="?t=1109" onclick="return jumpTo(1109);">18:29</a>&ensp;Roadkill - Dubfire (SCI+TEC)<br><a class="shade" href="?t=1204" onclick="return jumpTo(1204);">20:04</a> - <a class="shade" href="?t=1436" onclick="return jumpTo(1436);">23:56</a>&ensp;Foul Beats (Original Mix) - Boris<br><a class="shade" href="?t=1467" onclick="return jumpTo(1467);">24:27</a> - <a class="shade" href="?t=1805" onclick="return jumpTo(1805);">30:05</a>&ensp;Saturdays - Phil Kieran (Turbo Recordings)<br><a class="shade" href="?t=2196" onclick="return jumpTo(2196);">36:36</a> - <a class="shade" href="?t=2530" onclick="return jumpTo(2530);">42:10</a>&ensp;Untight - Petter (Border Community)<br><a class="shade" href="?t=2511" onclick="return jumpTo(2511);">41:51</a> - <a class="shade" href="?t=2889" onclick="return jumpTo(2889);">48:09</a>&ensp;Bromley - Joy Orbison & Overmono (XL Recordings)<br><a class="shade" href="?t=2914" onclick="return jumpTo(2914);">48:34</a> - <a class="shade" href="?t=3275" onclick="return jumpTo(3275);">54:35</a>&ensp;Camargo - Undercatt (DIYNAMIC)<br><a class="shade" href="?t=3302" onclick="return jumpTo(3302);">55:02</a> - <a class="shade" href="?t=3750" onclick="return jumpTo(3750);">1:02:30</a>&ensp;The Anger - Stimming (Liebe Detail)<br><a class="shade" href="?t=3741" onclick="return jumpTo(3741);">1:02:21</a> - <a class="shade" href="?t=4082" onclick="return jumpTo(4082);">1:08:02</a>&ensp;Mr Dry - Tim Green (Tim Green Recordings)<br><a class="shade" href="?t=4639" onclick="return jumpTo(4639);">1:17:19</a> - <a class="shade" href="?t=5087" onclick="return jumpTo(5087);">1:24:47</a>&ensp;Ripple (Original Mix) - Max Cooper (TRAUM Schallplatten)<br><a class="shade" href="?t=5075" onclick="return jumpTo(5075);">1:24:35</a> - <a class="shade" href="?t=5505" onclick="return jumpTo(5505);">1:31:45</a>&ensp;3 Cities (Max Cooper Rmx) - Fairmont (TRAUM Schallplatten)<br><a class="shade" href="?t=5498" onclick="return jumpTo(5498);">1:31:38</a> - <a class="shade" href="?t=5960" onclick="return jumpTo(5960);">1:39:20</a>&ensp;Lost Another Angel - Pig & Dan<br><br><div class="links">
+<b>Community tags</b> (public)<br>
+<div id="videotags"></div><br>
+<br><b>Songs in this video</b> (recognized via YouTube Content ID):<br><a class="shade" href="?t=735" onclick="return jumpTo(735);">12:15</a> - <a class="shade" href="?t=1109" onclick="return jumpTo(1109);">18:29</a>&ensp;Roadkill - Dubfire (SCI+TEC)<br><a class="shade" href="?t=1204" onclick="return jumpTo(1204);">20:04</a> - <a class="shade" href="?t=1436" onclick="return jumpTo(1436);">23:56</a>&ensp;Foul Beats (Original Mix) - Boris<br><a class="shade" href="?t=1467" onclick="return jumpTo(1467);">24:27</a> - <a class="shade" href="?t=1805" onclick="return jumpTo(1805);">30:05</a>&ensp;Saturdays - Phil Kieran (Turbo Recordings)<br><a class="shade" href="?t=2196" onclick="return jumpTo(2196);">36:36</a> - <a class="shade" href="?t=2530" onclick="return jumpTo(2530);">42:10</a>&ensp;Untight - Petter (Border Community)<br><a class="shade" href="?t=2511" onclick="return jumpTo(2511);">41:51</a> - <a class="shade" href="?t=2889" onclick="return jumpTo(2889);">48:09</a>&ensp;Bromley - Joy Orbison & Overmono (XL Recordings)<br><a class="shade" href="?t=2914" onclick="return jumpTo(2914);">48:34</a> - <a class="shade" href="?t=3275" onclick="return jumpTo(3275);">54:35</a>&ensp;Camargo - Undercatt (DIYNAMIC)<br><a class="shade" href="?t=3302" onclick="return jumpTo(3302);">55:02</a> - <a class="shade" href="?t=3750" onclick="return jumpTo(3750);">1:02:30</a>&ensp;The Anger - Stimming (Liebe Detail)<br><a class="shade" href="?t=3741" onclick="return jumpTo(3741);">1:02:21</a> - <a class="shade" href="?t=4082" onclick="return jumpTo(4082);">1:08:02</a>&ensp;Mr Dry - Tim Green (Tim Green Recordings)<br><a class="shade" href="?t=4639" onclick="return jumpTo(4639);">1:17:19</a> - <a class="shade" href="?t=5087" onclick="return jumpTo(5087);">1:24:47</a>&ensp;Ripple (Original Mix) - Max Cooper (TRAUM Schallplatten)<br><a class="shade" href="?t=5075" onclick="return jumpTo(5075);">1:24:35</a> - <a class="shade" href="?t=5505" onclick="return jumpTo(5505);">1:31:45</a>&ensp;3 Cities (Max Cooper Rmx) - Fairmont (TRAUM Schallplatten)<br><a class="shade" href="?t=5498" onclick="return jumpTo(5498);">1:31:38</a> - <a class="shade" href="?t=5960" onclick="return jumpTo(5960);">1:39:20</a>&ensp;Lost Another Angel - Pig & Dan<br><br><div class="links">
 			<a href="https://www.youtube.com/watch?v=dzDZULi6mKM" target="_blank" class="btn"><img src="/media/yt.png" class="icon"> Watch on YouTube</a>
 			<a href="https://mixer.com/deadmau5?vod=c1L0p9QsL0SCvgncvM-axw" target="_blank" class="btn disabled" onclick="return false;"><img src="/media/mixer.png" class="icon"> Watch on Mixer (original)</a>
 			</div>

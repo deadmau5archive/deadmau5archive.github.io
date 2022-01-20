@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="videpagecontainer">
 		<div class="navbox">
@@ -79,8 +85,11 @@
 	</div>
 </div>
 <script src="/media/chat.js" type="text/javascript"></script>
-<div id="player_chat"><div id="chat" data-id="353355128" data-chattype="twitch" data-offset="0">Loading...</div></div>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat" data-id="353355128" data-p="0" data-np="1" data-chattype="twitch" data-offset="0">Loading...</div></div>
 <div class="postdesc">
+<b>Community tags</b> (public)<br>
+<div id="videotags"></div><br>
 <b>Muted segments:</b>&emsp;<a class="shade" href="?t=1080" onclick="return jumpTo(1080);">18:00</a> - <a class="shade" href="?t=1440" onclick="return jumpTo(1440);">24:00</a>&ensp;<a class="shade" href="?t=36000" onclick="return jumpTo(36000);">10:00:00</a> - <a class="shade" href="?t=36360" onclick="return jumpTo(36360);">10:06:00</a>&ensp;<a class="shade" href="?t=36720" onclick="return jumpTo(36720);">10:12:00</a> - <a class="shade" href="?t=37163.174" onclick="return jumpTo(37163.174);">10:19:23</a><br><b>Discontinuity:</b>&emsp;<a class="shade" href="?t=18170" onclick="return jumpTo(18170);">5:02:50</a>&ensp;<a class="shade" href="?t=18890" onclick="return jumpTo(18890);">5:14:50</a><br><br><div class="links">
 			<a href="https://www.youtube.com/watch?v=-pi_aL5rgVs" target="_blank" class="btn"><img src="/media/yt.png" class="icon"> Watch on YouTube</a>
 			<a href="https://www.twitch.tv/videos/353355128" target="_blank" class="btn"><img src="/media/twitch.png" class="icon"> Watch on Twitch (original)</a>

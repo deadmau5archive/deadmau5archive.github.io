@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="videpagecontainer">
 		<div class="navbox">
@@ -85,8 +91,11 @@
 	</div>
 </div>
 <script src="/media/chat.js" type="text/javascript"></script>
-<div id="player_chat"><div id="chat" data-id="120038278" data-chattype="twitch" data-offset="0">Loading...</div></div>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat" data-id="120038278" data-p="0" data-np="1" data-chattype="twitch" data-offset="0">Loading...</div></div>
 <div class="postdesc">
+<b>Community tags</b> (public)<br>
+<div id="videotags"></div><br>
 <b>Muted segments:</b>&emsp;<a class="shade" href="?t=6960" onclick="return jumpTo(6960);">1:56:00</a> - <a class="shade" href="?t=7800" onclick="return jumpTo(7800);">2:10:00</a>&ensp;<a class="shade" href="?t=9120" onclick="return jumpTo(9120);">2:32:00</a> - <a class="shade" href="?t=9476" onclick="return jumpTo(9476);">2:37:56</a><br><b>Songs removed to prevent YouTube block:</b>&emsp;Electric Candyman (feat. Thom Yorke) - Flying Lotus (<a class="shade" href="?t=1419" onclick="return jumpTo(1419);">23:39</a> - <a class="shade" href="?t=1642" onclick="return jumpTo(1642);">27:22</a>)<br><br><div class="links">
 			<a href="https://www.youtube.com/watch?v=ffihUr_yEYE" target="_blank" class="btn"><img src="/media/yt.png" class="icon"> Watch on YouTube</a>
 			<a href="https://www.twitch.tv/videos/120038278" target="_blank" class="btn"><img src="/media/twitch.png" class="icon"> Watch on Twitch (original)</a>

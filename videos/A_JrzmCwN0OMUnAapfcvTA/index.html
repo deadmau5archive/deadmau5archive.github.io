@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	<link rel="stylesheet" href="/media/style_mixer.css">
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="videpagecontainer">
 		<div class="navbox">
@@ -79,8 +85,11 @@
 	</div>
 </div>
 <script src="/media/chat.js" type="text/javascript"></script>
-<div id="player_chat"><div id="chat" data-id="A_JrzmCwN0OMUnAapfcvTA" data-chattype="mixer" data-offset="0">Loading...</div></div>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat" data-id="A_JrzmCwN0OMUnAapfcvTA" data-p="0" data-np="1" data-chattype="mixer" data-offset="0">Loading...</div></div>
 <div class="postdesc">
+<b>Community tags</b> (public)<br>
+<div id="videotags"></div><br>
 <b>Songs removed to prevent YouTube block:</b><br><a class="shade" href="?t=7287" onclick="return jumpTo(7287);">2:01:27</a> - <a class="shade" href="?t=7357" onclick="return jumpTo(7357);">2:02:37</a>&ensp;Arcadia (unreleased) - deadmau5 (mau5trap Recordings Ltd)<br><a class="shade" href="?t=7358" onclick="return jumpTo(7358);">2:02:38</a> - <a class="shade" href="?t=7389" onclick="return jumpTo(7389);">2:03:09</a>&ensp;Arcadia (unreleased) - deadmau5 (mau5trap Recordings Ltd)<br><br><b>Songs in this video</b> (recognized via YouTube Content ID):<br><a class="shade" href="?t=1280" onclick="return jumpTo(1280);">21:20</a> - <a class="shade" href="?t=1338" onclick="return jumpTo(1338);">22:18</a>&ensp;My Day - DAIINAS (DAIINAS)<br><a class="shade" href="?t=2077" onclick="return jumpTo(2077);">34:37</a> - <a class="shade" href="?t=2154" onclick="return jumpTo(2154);">35:54</a>&ensp;mark my words - Leif the Viking (Leif the Viking)<br><br><div class="links">
 			<a href="https://www.youtube.com/watch?v=mv-bZL6Tmnc" target="_blank" class="btn"><img src="/media/yt.png" class="icon"> Watch on YouTube</a>
 			<a href="https://mixer.com/deadmau5?vod=A_JrzmCwN0OMUnAapfcvTA" target="_blank" class="btn disabled" onclick="return false;"><img src="/media/mixer.png" class="icon"> Watch on Mixer (original)</a>

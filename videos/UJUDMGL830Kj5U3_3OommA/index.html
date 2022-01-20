@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	<link rel="stylesheet" href="/media/style_mixer.css">
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="videpagecontainer">
 		<div class="navbox">
@@ -79,9 +85,12 @@
 	</div>
 </div>
 <script src="/media/chat.js" type="text/javascript"></script>
-<div id="player_chat"><div id="chat" data-id="UJUDMGL830Kj5U3_3OommA" data-chattype="mixer" data-offset="0">Loading...</div></div>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat" data-id="UJUDMGL830Kj5U3_3OommA" data-p="0" data-np="1" data-chattype="mixer" data-offset="0">Loading...</div></div>
 <div class="postdesc">
-<b>Songs in this video</b> (recognized via YouTube Content ID):<br><a class="shade" href="?t=9586" onclick="return jumpTo(9586);">2:39:46</a> - <a class="shade" href="?t=9687" onclick="return jumpTo(9687);">2:41:27</a>&ensp;Ghosts 'n' Stuff - deadmau5 (Ultra Records)<br><a class="shade" href="?t=13538" onclick="return jumpTo(13538);">3:45:38</a> - <a class="shade" href="?t=13608" onclick="return jumpTo(13608);">3:46:48</a>&ensp;Ghosts 'n' Stuff (Original Instrumental Mix) - deadmau5 (Ultra Records)<br><a class="shade" href="?t=15099" onclick="return jumpTo(15099);">4:11:39</a> - <a class="shade" href="?t=15492" onclick="return jumpTo(15492);">4:18:12</a>&ensp;Maths - Original Mix - deadmau5 (Ultra Records)<br><a class="shade" href="?t=15499" onclick="return jumpTo(15499);">4:18:19</a> - <a class="shade" href="?t=15814" onclick="return jumpTo(15814);">4:23:34</a>&ensp;Avaritia - deadmau5 (Virgin Records Ltd)<br><a class="shade" href="?t=15883" onclick="return jumpTo(15883);">4:24:43</a> - <a class="shade" href="?t=16103" onclick="return jumpTo(16103);">4:28:23</a>&ensp;Monophobia (feat. Rob Swire) [Extended Mix] - deadmau5 (mau5trap Recordings Limited)<br><a class="shade" href="?t=16123" onclick="return jumpTo(16123);">4:28:43</a> - <a class="shade" href="?t=16433" onclick="return jumpTo(16433);">4:33:53</a>&ensp;10.8 - deadmau5 & Mr. Bill (mau5trap Recordings Limited)<br><a class="shade" href="?t=16485" onclick="return jumpTo(16485);">4:34:45</a> - <a class="shade" href="?t=16665" onclick="return jumpTo(16665);">4:37:45</a>&ensp;Polaris - deadmau5<br><a class="shade" href="?t=16770" onclick="return jumpTo(16770);">4:39:30</a> - <a class="shade" href="?t=17247" onclick="return jumpTo(17247);">4:47:27</a>&ensp;while(1<2) - deadmau5 (Virgin Records Ltd)<br><a class="shade" href="?t=17365" onclick="return jumpTo(17365);">4:49:25</a> - <a class="shade" href="?t=17628" onclick="return jumpTo(17628);">4:53:48</a>&ensp;Moar Ghosts 'n' Stuff - deadmau5 (Ultra Records)<br><br><div class="links">
+<b>Community tags</b> (public)<br>
+<div id="videotags"></div><br>
+<br><b>Songs in this video</b> (recognized via YouTube Content ID):<br><a class="shade" href="?t=9586" onclick="return jumpTo(9586);">2:39:46</a> - <a class="shade" href="?t=9687" onclick="return jumpTo(9687);">2:41:27</a>&ensp;Ghosts 'n' Stuff - deadmau5 (Ultra Records)<br><a class="shade" href="?t=13538" onclick="return jumpTo(13538);">3:45:38</a> - <a class="shade" href="?t=13608" onclick="return jumpTo(13608);">3:46:48</a>&ensp;Ghosts 'n' Stuff (Original Instrumental Mix) - deadmau5 (Ultra Records)<br><a class="shade" href="?t=15099" onclick="return jumpTo(15099);">4:11:39</a> - <a class="shade" href="?t=15492" onclick="return jumpTo(15492);">4:18:12</a>&ensp;Maths - Original Mix - deadmau5 (Ultra Records)<br><a class="shade" href="?t=15499" onclick="return jumpTo(15499);">4:18:19</a> - <a class="shade" href="?t=15814" onclick="return jumpTo(15814);">4:23:34</a>&ensp;Avaritia - deadmau5 (Virgin Records Ltd)<br><a class="shade" href="?t=15883" onclick="return jumpTo(15883);">4:24:43</a> - <a class="shade" href="?t=16103" onclick="return jumpTo(16103);">4:28:23</a>&ensp;Monophobia (feat. Rob Swire) [Extended Mix] - deadmau5 (mau5trap Recordings Limited)<br><a class="shade" href="?t=16123" onclick="return jumpTo(16123);">4:28:43</a> - <a class="shade" href="?t=16433" onclick="return jumpTo(16433);">4:33:53</a>&ensp;10.8 - deadmau5 & Mr. Bill (mau5trap Recordings Limited)<br><a class="shade" href="?t=16485" onclick="return jumpTo(16485);">4:34:45</a> - <a class="shade" href="?t=16665" onclick="return jumpTo(16665);">4:37:45</a>&ensp;Polaris - deadmau5<br><a class="shade" href="?t=16770" onclick="return jumpTo(16770);">4:39:30</a> - <a class="shade" href="?t=17247" onclick="return jumpTo(17247);">4:47:27</a>&ensp;while(1<2) - deadmau5 (Virgin Records Ltd)<br><a class="shade" href="?t=17365" onclick="return jumpTo(17365);">4:49:25</a> - <a class="shade" href="?t=17628" onclick="return jumpTo(17628);">4:53:48</a>&ensp;Moar Ghosts 'n' Stuff - deadmau5 (Ultra Records)<br><br><div class="links">
 			<a href="https://www.youtube.com/watch?v=yUcrrtOUIo4" target="_blank" class="btn"><img src="/media/yt.png" class="icon"> Watch on YouTube</a>
 			<a href="https://mixer.com/deadmau5?vod=UJUDMGL830Kj5U3_3OommA" target="_blank" class="btn disabled" onclick="return false;"><img src="/media/mixer.png" class="icon"> Watch on Mixer (original)</a>
 			</div>

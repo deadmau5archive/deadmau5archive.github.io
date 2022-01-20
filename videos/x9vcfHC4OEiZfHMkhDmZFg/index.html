@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	<link rel="stylesheet" href="/media/style_mixer.css">
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="videpagecontainer">
 		<div class="navbox">
@@ -79,8 +85,11 @@
 	</div>
 </div>
 <script src="/media/chat.js" type="text/javascript"></script>
-<div id="player_chat"><div id="chat" data-id="x9vcfHC4OEiZfHMkhDmZFg" data-chattype="mixer" data-offset="0">Loading...</div></div>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat" data-id="x9vcfHC4OEiZfHMkhDmZFg" data-p="0" data-np="1" data-chattype="mixer" data-offset="0">Loading...</div></div>
 <div class="postdesc">
+<b>Community tags</b> (public)<br>
+<div id="videotags"></div><br>
 <b>Songs removed to prevent YouTube block:</b><br><a class="shade" href="?t=9561" onclick="return jumpTo(9561);">2:39:21</a> - <a class="shade" href="?t=9652" onclick="return jumpTo(9652);">2:40:52</a>&ensp;Omnifck (unreleased) - deadmau5 (mau5trap Recordings Ltd)<br><a class="shade" href="?t=10999" onclick="return jumpTo(10999);">3:03:19</a> - <a class="shade" href="?t=11027" onclick="return jumpTo(11027);">3:03:47</a>&ensp;Omnifck (unreleased) - deadmau5 (mau5trap Recordings Ltd)<br><br><b>Songs in this video</b> (recognized via YouTube Content ID):<br><a class="shade" href="?t=7908" onclick="return jumpTo(7908);">2:11:48</a> - <a class="shade" href="?t=7968" onclick="return jumpTo(7968);">2:12:48</a>&ensp;caritas (ov) - deadmau5 (mau5trap Recordings Limited)<br><a class="shade" href="?t=7958" onclick="return jumpTo(7958);">2:12:38</a> - <a class="shade" href="?t=8049" onclick="return jumpTo(8049);">2:14:09</a>&ensp;unjaded (ov) - deadmau5 (mau5trap Recordings Limited)<br><a class="shade" href="?t=8058" onclick="return jumpTo(8058);">2:14:18</a> - <a class="shade" href="?t=8110" onclick="return jumpTo(8110);">2:15:10</a>&ensp;gula (ov) - deadmau5 (mau5trap Recordings Limited)<br><a class="shade" href="?t=8105" onclick="return jumpTo(8105);">2:15:05</a> - <a class="shade" href="?t=8175" onclick="return jumpTo(8175);">2:16:15</a>&ensp;ira (ov) - deadmau5 (mau5trap Recordings Limited)<br><a class="shade" href="?t=8176" onclick="return jumpTo(8176);">2:16:16</a> - <a class="shade" href="?t=8284" onclick="return jumpTo(8284);">2:18:04</a>&ensp;acedia (ov) - deadmau5 (mau5trap Recordings Limited)<br><br><div class="links">
 			<a href="https://www.youtube.com/watch?v=wKP4B9qgidc" target="_blank" class="btn"><img src="/media/yt.png" class="icon"> Watch on YouTube</a>
 			<a href="https://mixer.com/deadmau5?vod=x9vcfHC4OEiZfHMkhDmZFg" target="_blank" class="btn disabled" onclick="return false;"><img src="/media/mixer.png" class="icon"> Watch on Mixer (original)</a>

@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	<link rel="stylesheet" href="/media/style_mixer.css">
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="videpagecontainer">
 		<div class="navbox">
@@ -79,9 +85,12 @@
 	</div>
 </div>
 <script src="/media/chat.js" type="text/javascript"></script>
-<div id="player_chat"><div id="chat" data-id="9rFtBdYVt0ecDGltk2ImvA" data-chattype="mixer" data-offset="0">Loading...</div></div>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat" data-id="9rFtBdYVt0ecDGltk2ImvA" data-p="0" data-np="1" data-chattype="mixer" data-offset="0">Loading...</div></div>
 <div class="postdesc">
-<b>Songs in this video</b> (recognized via YouTube Content ID):<br><a class="shade" href="?t=8903" onclick="return jumpTo(8903);">2:28:23</a> - <a class="shade" href="?t=8988" onclick="return jumpTo(8988);">2:29:48</a>&ensp;Drama Free (Extended Instrumental) - deadmau5 (mau5trap Recordings Limited)<br><a class="shade" href="?t=9303" onclick="return jumpTo(9303);">2:35:03</a> - <a class="shade" href="?t=9457" onclick="return jumpTo(9457);">2:37:37</a>&ensp;Cthulhu Sleeps - deadmau5 (Ultra Records)<br><a class="shade" href="?t=9485" onclick="return jumpTo(9485);">2:38:05</a> - <a class="shade" href="?t=9598" onclick="return jumpTo(9598);">2:39:58</a>&ensp;Infra Turbo Pigcart Racer - deadmau5 (Virgin Records Ltd)<br><a class="shade" href="?t=9752" onclick="return jumpTo(9752);">2:42:32</a> - <a class="shade" href="?t=9809" onclick="return jumpTo(9809);">2:43:29</a>&ensp;satrn+coasted - deadmau5 (720mau5 LLC)<br><a class="shade" href="?t=9816" onclick="return jumpTo(9816);">2:43:36</a> - <a class="shade" href="?t=9841" onclick="return jumpTo(9841);">2:44:01</a>&ensp;Suckfest9001 - Deadmau5 (New State)<br><a class="shade" href="?t=9865" onclick="return jumpTo(9865);">2:44:25</a> - <a class="shade" href="?t=9893" onclick="return jumpTo(9893);">2:44:53</a>&ensp;Maths - Original Mix - deadmau5 (Ultra Records)<br><br><div class="links">
+<b>Community tags</b> (public)<br>
+<div id="videotags"></div><br>
+<br><b>Songs in this video</b> (recognized via YouTube Content ID):<br><a class="shade" href="?t=8903" onclick="return jumpTo(8903);">2:28:23</a> - <a class="shade" href="?t=8988" onclick="return jumpTo(8988);">2:29:48</a>&ensp;Drama Free (Extended Instrumental) - deadmau5 (mau5trap Recordings Limited)<br><a class="shade" href="?t=9303" onclick="return jumpTo(9303);">2:35:03</a> - <a class="shade" href="?t=9457" onclick="return jumpTo(9457);">2:37:37</a>&ensp;Cthulhu Sleeps - deadmau5 (Ultra Records)<br><a class="shade" href="?t=9485" onclick="return jumpTo(9485);">2:38:05</a> - <a class="shade" href="?t=9598" onclick="return jumpTo(9598);">2:39:58</a>&ensp;Infra Turbo Pigcart Racer - deadmau5 (Virgin Records Ltd)<br><a class="shade" href="?t=9752" onclick="return jumpTo(9752);">2:42:32</a> - <a class="shade" href="?t=9809" onclick="return jumpTo(9809);">2:43:29</a>&ensp;satrn+coasted - deadmau5 (720mau5 LLC)<br><a class="shade" href="?t=9816" onclick="return jumpTo(9816);">2:43:36</a> - <a class="shade" href="?t=9841" onclick="return jumpTo(9841);">2:44:01</a>&ensp;Suckfest9001 - Deadmau5 (New State)<br><a class="shade" href="?t=9865" onclick="return jumpTo(9865);">2:44:25</a> - <a class="shade" href="?t=9893" onclick="return jumpTo(9893);">2:44:53</a>&ensp;Maths - Original Mix - deadmau5 (Ultra Records)<br><br><div class="links">
 			<a href="https://www.youtube.com/watch?v=UUYzK31XatM" target="_blank" class="btn"><img src="/media/yt.png" class="icon"> Watch on YouTube</a>
 			<a href="https://mixer.com/deadmau5?vod=9rFtBdYVt0ecDGltk2ImvA" target="_blank" class="btn disabled" onclick="return false;"><img src="/media/mixer.png" class="icon"> Watch on Mixer (original)</a>
 			</div>

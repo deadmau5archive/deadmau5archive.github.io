@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="videpagecontainer">
 		<div class="navbox">
@@ -79,8 +85,11 @@
 	</div>
 </div>
 <script src="/media/chat.js" type="text/javascript"></script>
-<div id="player_chat"><div id="chat" data-id="209748106" data-chattype="twitch" data-offset="0">Loading...</div></div>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat" data-id="209748106" data-p="0" data-np="1" data-chattype="twitch" data-offset="0">Loading...</div></div>
 <div class="postdesc">
+<b>Community tags</b> (public)<br>
+<div id="videotags"></div><br>
 <b>Muted segments:</b>&emsp;<a class="shade" href="?t=3049.117" onclick="return jumpTo(3049.117);">50:49</a> - <a class="shade" href="?t=3791.017" onclick="return jumpTo(3791.017);">1:03:11</a>&ensp;<a class="shade" href="?t=4853.6" onclick="return jumpTo(4853.6);">1:20:53</a> - <a class="shade" href="?t=5223.817" onclick="return jumpTo(5223.817);">1:27:03</a>&ensp;<a class="shade" href="?t=6291.083" onclick="return jumpTo(6291.083);">1:44:51</a> - <a class="shade" href="?t=6661.717" onclick="return jumpTo(6661.717);">1:51:01</a>&ensp;<a class="shade" href="?t=7374.283" onclick="return jumpTo(7374.283);">2:02:54</a> - <a class="shade" href="?t=7741.083" onclick="return jumpTo(7741.083);">2:09:01</a>&ensp;<a class="shade" href="?t=12778.15" onclick="return jumpTo(12778.15);">3:32:58</a> - <a class="shade" href="?t=13148.95" onclick="return jumpTo(13148.95);">3:39:08</a>&ensp;<a class="shade" href="?t=15294.617" onclick="return jumpTo(15294.617);">4:14:54</a> - <a class="shade" href="?t=15662.017" onclick="return jumpTo(15662.017);">4:21:02</a>&ensp;<a class="shade" href="?t=16378.117" onclick="return jumpTo(16378.117);">4:32:58</a> - <a class="shade" href="?t=17107.017" onclick="return jumpTo(17107.017);">4:45:07</a>&ensp;<a class="shade" href="?t=17452.917" onclick="return jumpTo(17452.917);">4:50:52</a> - <a class="shade" href="?t=18190.817" onclick="return jumpTo(18190.817);">5:03:10</a>&ensp;<a class="shade" href="?t=18894.65" onclick="return jumpTo(18894.65);">5:14:54</a> - <a class="shade" href="?t=19628.183" onclick="return jumpTo(19628.183);">5:27:08</a>&ensp;<a class="shade" href="?t=20699.25" onclick="return jumpTo(20699.25);">5:44:59</a> - <a class="shade" href="?t=21431.817" onclick="return jumpTo(21431.817);">5:57:11</a>&ensp;<a class="shade" href="?t=23936.416" onclick="return jumpTo(23936.416);">6:38:56</a> - <a class="shade" href="?t=24303.683" onclick="return jumpTo(24303.683);">6:45:03</a>&ensp;<a class="shade" href="?t=29336.85" onclick="return jumpTo(29336.85);">8:08:56</a> - <a class="shade" href="?t=30061.85" onclick="return jumpTo(30061.85);">8:21:01</a>&ensp;<a class="shade" href="?t=32577.916999999" onclick="return jumpTo(32577.916999999);">9:02:57</a> - <a class="shade" href="?t=33660.983" onclick="return jumpTo(33660.983);">9:21:00</a><br><br><div class="links">
 			<a href="https://www.youtube.com/watch?v=o7yuhJh9ynA" target="_blank" class="btn"><img src="/media/yt.png" class="icon"> Watch on YouTube</a>
 			<a href="https://www.twitch.tv/videos/209748106" target="_blank" class="btn"><img src="/media/twitch.png" class="icon"> Watch on Twitch (original)</a>

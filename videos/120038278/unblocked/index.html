@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
 	<link rel="stylesheet" href="/media/style.css">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 	
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -26,14 +28,18 @@
 		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
 	</div>
 </div>
-<div class="titlebox spacing headerlinks">
+<div class="titlebox spacing headerlinks two">
 	<div>
-		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
 		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
 		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
 	</div>
 </div>
-
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
 	</div>
 	<div class="videpagecontainer">
 		<div class="navbox">
@@ -85,8 +91,11 @@
 	</div>
 </div>
 <script src="/media/chat.js" type="text/javascript"></script>
-<div id="player_chat"><div id="chat" data-id="120038278" data-chattype="twitch" data-offset="0">Loading...</div></div>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat" data-id="120038278" data-p="0" data-np="1" data-chattype="twitch" data-offset="0">Loading...</div></div>
 <div class="postdesc">
+<b>Community tags</b> (public)<br>
+<div id="videotags"></div><br>
 <b>Muted segments:</b>&emsp;<a class="shade" href="?t=6960" onclick="return jumpTo(6960);">1:56:00</a> - <a class="shade" href="?t=7800" onclick="return jumpTo(7800);">2:10:00</a>&ensp;<a class="shade" href="?t=9120" onclick="return jumpTo(9120);">2:32:00</a> - <a class="shade" href="?t=9476" onclick="return jumpTo(9476);">2:37:56</a><br><b>Songs removed to prevent YouTube block:</b>&emsp;Eyes Above - Flying Lotus (<a class="shade" href="?t=0" onclick="return jumpTo(0);">0:00</a> - <a class="shade" href="?t=73" onclick="return jumpTo(73);">1:13</a>)&ensp;Moment of Hesitation - Flying Lotus (<a class="shade" href="?t=434" onclick="return jumpTo(434);">7:14</a> - <a class="shade" href="?t=583" onclick="return jumpTo(583);">9:43</a>)&ensp;Tesla - Flying Lotus (<a class="shade" href="?t=573" onclick="return jumpTo(573);">9:33</a> - <a class="shade" href="?t=698" onclick="return jumpTo(698);">11:38</a>)&ensp;Theme (Original Album Version) - Flying Lotus (<a class="shade" href="?t=686" onclick="return jumpTo(686);">11:26</a> - <a class="shade" href="?t=782" onclick="return jumpTo(782);">13:02</a>)&ensp;Turtles (Original Album Version) - Flying Lotus (<a class="shade" href="?t=774" onclick="return jumpTo(774);">12:54</a> - <a class="shade" href="?t=902" onclick="return jumpTo(902);">15:02</a>)&ensp;Fkn Dead - Flying Lotus (<a class="shade" href="?t=898" onclick="return jumpTo(898);">14:58</a> - <a class="shade" href="?t=947" onclick="return jumpTo(947);">15:47</a>)&ensp;Coronus, the Terminator - Flying Lotus (<a class="shade" href="?t=938" onclick="return jumpTo(938);">15:38</a> - <a class="shade" href="?t=1109" onclick="return jumpTo(1109);">18:29</a>)&ensp;Cold Dead - Flying Lotus (<a class="shade" href="?t=1208" onclick="return jumpTo(1208);">20:08</a> - <a class="shade" href="?t=1311" onclick="return jumpTo(1311);">21:51</a>)&ensp;The Protest - Flying Lotus (<a class="shade" href="?t=1306" onclick="return jumpTo(1306);">21:46</a> - <a class="shade" href="?t=1415" onclick="return jumpTo(1415);">23:35</a>)&ensp;Electric Candyman (feat. Thom Yorke) - Flying Lotus (<a class="shade" href="?t=1419" onclick="return jumpTo(1419);">23:39</a> - <a class="shade" href="?t=1642" onclick="return jumpTo(1642);">27:22</a>)&ensp;Descent Into Madness (feat. Thundercat) - Flying Lotus (<a class="shade" href="?t=1761" onclick="return jumpTo(1761);">29:21</a> - <a class="shade" href="?t=1846" onclick="return jumpTo(1846);">30:46</a>)&ensp;The Boys Who Died in Their Sleep (feat. Thundercat) (Instrumental) - Flying Lotus (<a class="shade" href="?t=1837" onclick="return jumpTo(1837);">30:37</a> - <a class="shade" href="?t=1949" onclick="return jumpTo(1949);">32:29</a>)&ensp;Siren Song (feat. Angel Deradoorian) - Flying Lotus (<a class="shade" href="?t=2377" onclick="return jumpTo(2377);">39:37</a> - <a class="shade" href="?t=2535" onclick="return jumpTo(2535);">42:15</a>)&ensp;Turkey Dog Coma - Flying Lotus (<a class="shade" href="?t=2528" onclick="return jumpTo(2528);">42:08</a> - <a class="shade" href="?t=2727" onclick="return jumpTo(2727);">45:27</a>)&ensp;Coronus, the Terminator - Flying Lotus (<a class="shade" href="?t=3215" onclick="return jumpTo(3215);">53:35</a> - <a class="shade" href="?t=3298" onclick="return jumpTo(3298);">54:58</a>)<br><br><div class="links">
 			<a href="https://www.youtube.com/watch?v=LyhXaZxZPOk" target="_blank" class="btn"><img src="/media/yt.png" class="icon"> Watch on YouTube</a>
 			<a href="https://www.twitch.tv/videos/120038278" target="_blank" class="btn"><img src="/media/twitch.png" class="icon"> Watch on Twitch (original)</a>
