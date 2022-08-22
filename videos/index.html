@@ -1,0 +1,208 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>deadmau5 stream archive</title>
+	<link rel="stylesheet" href="/media/style.css?nc=1661197829">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+	
+	<link rel="icon" type="image/png" href="/media/favicon.png" />
+</head>
+
+<body>
+	<div>
+		<div class="titlebox img">
+			<img src="/media/profile.jpg" />
+		</div><div class="titlebox spacing bgsmall">
+			<img class="titleimg" src="/media/title1.png" alt="deadmau5" />
+		</div><div class="titlebox">
+			<img class="titleimg" src="/media/title2.png" alt="stream" />
+		</div><div class="titlebox">
+			<img class="titleimg" src="/media/title3.png" alt="archive" />
+		</div><div class="titlebox spacing headerlinks">
+	<div>
+		<a class="shade" target="_blank" href="https://www.twitch.tv/deadmau5"><img src="/media/twitch.png" /> Twitch</a>
+		<a class="shade" target="_blank" href="/media/facebook-gaming-kekw.png"><img src="/media/mixer.png" /> Mixer</a>
+		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
+	</div>
+</div>
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" target="_blank" href="https://discord.gg/bQ3P9d6XUt"><img src="/media/discord.png" /> Discord</a>
+		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
+	</div>
+</div>
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
+	</div>
+	<div class="videpagecontainer">
+		<div class="navbox">
+			<a href="/page?p=1" class="btn">Browse videos</a>
+			<div class="pullright">
+				<div id="prevNextLinks"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="partInfoContainer"></div>
+<div id="videoBox">
+	
+	<div id="playerContainer">	
+		<div id="youtube-player"></div> 
+		<noscript><center>
+			<a target="_blank" href="https://enable-javascript.com/">
+				<h3 style="color: #ff2626;padding-top: 277px;display: block;">Please enable Javascript.</h3>
+			</a>
+		</center></noscript>
+		
+		<!--
+		<div style="display:none;" class="playerbox" id="playerbox_notfound">video could not be found</div>
+		<div style="display:none;" class="playerbox" id="playerbox_abandoned">processing abandoned</div>
+		<div style="display:none;" class="playerbox" id="playerbox_notuploaded">not yet uploaded</div>
+		<div style="display:none;" class="playerbox" id="playerbox_norecording">no recording of this stream exists</div>
+		<div style="display:none;" class="playerbox" id="playerbox_accessrestriction">access restricted</div>
+		-->
+		
+		<div class="playerbox" id="playerbox_notfound">
+			<table class="player_error_messsage">
+				<tr>
+					<td>
+						<div class="error_image">
+							<img src="/media/sadnyan.png">
+						</div>
+					</td>
+					<td>
+						<div class="error_text">
+							<h2>This video could not be found.</h2>
+							<br>
+							Try browsing the <a href="/page?p=1" class="shade">available videos</a>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="playerbox" id="playerbox_abandoned">
+			<table class="player_error_messsage">
+				<tr>
+					<td>
+						<div class="error_image">
+							<img src="/media/sadnyan.png">
+						</div>
+					</td>
+					<td>
+						<div class="error_text">
+							<h2><img class="error_icon" src="/media/nope.png"> This stream could not be processed.</h2>
+							<br>
+							YouTube has abandoned processing for this video.<br>
+							<span id="abandoned_original" style="display:none;">You can try watching the original below.</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="playerbox" id="playerbox_notuploaded">
+			<table class="player_error_messsage">
+				<tr>
+					<td>
+						<div class="error_image">
+							<img src="/media/sadnyan.png">
+						</div>
+					</td>
+					<td>
+						<div class="error_text">
+							<h2>This stream has not yet been uploaded.</h2>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="playerbox" id="playerbox_norecording">
+			<table class="player_error_messsage">
+				<tr>
+					<td>
+						<div class="error_image">
+							<img src="/media/sadnyan.png">
+						</div>
+					</td>
+					<td>
+						<div class="error_text">
+							<h2>No recording of this stream exists.</h2>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="playerbox" id="playerbox_accessrestriction">
+			<table class="player_error_messsage">
+				<tr>
+					<td>
+						<span class="lock_emoji">🔒</span>
+					</td>
+					<td>
+						<div class="error_text">
+							<h2>Access restricted.</h2>
+							<br>
+							Access to this video is restricted.<br>
+							<br>
+							<i>To access this video, you must be</i>
+							<div class="accessrestriction_box">
+								<span id="accessrestriction_state_login">❌</span> logged in &emsp; 
+								<span id="accessrestriction_helplinks_login">
+									<a href="#!" onclick="ar_login()"  class="shade">log in</a>
+								</span>
+							</div>
+							<div class="accessrestriction_box">
+								<span id="accessrestriction_state_connection">❌</span> connected to discord &emsp; 
+								<span id="accessrestriction_helplinks_connection">
+									<a href="#!" onclick="ar_connecthelptext()" class="shade">why</a> &nbsp; 
+									<a href="/connect_discord" class="shade">connect discord</a>
+								</span>
+							</div>
+							<div class="accessrestriction_box"><span id="accessrestriction_state_group">❌</span> part of user group <br>
+								<div style="padding-left: 25px; padding-top: 5px;" id="accessrestriction_group_list">
+									<i>loading...</i>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		
+	</div> 
+	<script src="https://www.youtube.com/iframe_api"></script>
+	
+	<script src="/media/player_dynamic.js" type="text/javascript"></script>
+	
+	<div class="videoTimelineInfoBox">
+		<div class="videoTimelineInfo">
+			<div class="tlbox">
+				<div class="tl">
+					<div class="tlmutesc" id="tl_sections"></div>
+				</div>
+			</div>
+			<div class="discoBox">
+				<div class="discoBoxMarkerC" id="tl_markers"></div>
+			</div>
+		</div>
+	</div>
+	<div id="desc">
+		<h2 id="desc_title">loading...</h2>
+		<span id="desc_game" class="game">--</span><br>
+		<span class="date" title="streamed on"><span id="desc_time_et">--/--/-- --:--</span>&emsp;<span class="dateUTC">(<span id="desc_time_utc">--/--/-- --:--</span> UTC)</span></span> <br>
+		<span id="desc_source" class="source">--</span>
+	</div>
+</div>
+<script src="/media/chat.js" type="text/javascript"></script>
+<div id="chat_tabs"></div>
+<div id="player_chat"><div id="chat">Loading...</div></div>
+<div id="desc_post" class="postdesc"></div>
+	</div>
+</body>
+</html>
