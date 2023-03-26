@@ -1,0 +1,164 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>deadmau5 stream archive</title>
+	<link rel="stylesheet" href="/media/style.css?nc=1679861611">
+	<script src="/media/api.js" type="text/javascript"></script>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+	
+	<link rel="icon" type="image/png" href="/media/favicon.png" />
+</head>
+
+<body>
+	<div>
+		<div class="titlebox img">
+			<img src="/media/profile.jpg" />
+		</div><div class="titlebox spacing bgsmall">
+			<img class="titleimg" src="/media/title1.png" alt="deadmau5" />
+		</div><div class="titlebox">
+			<img class="titleimg" src="/media/title2.png" alt="stream" />
+		</div><div class="titlebox">
+			<img class="titleimg" src="/media/title3.png" alt="archive" />
+		</div><div class="titlebox spacing headerlinks">
+	<div>
+		<a class="shade" target="_blank" href="https://www.twitch.tv/deadmau5"><img src="/media/twitch.png" /> Twitch</a>
+		<a class="shade" target="_blank" href="/media/facebook-gaming-kekw.png"><img src="/media/mixer.png" /> Mixer</a>
+		<a class="shade" target="_blank" href="http://mau5trap.tv"><img src="/media/favicon.png" /> mau5trap.tv</a>
+	</div>
+</div>
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" target="_blank" href="https://discord.gg/72xjgGe6zx"><img src="/media/discord.png" /> Discord</a>
+		<a class="shade" target="_blank" href="https://www.youtube.com/channel/UCS2jteJUs2-PoIhQOrUgVJA"><img src="/media/yt.png" /> YouTube</a>
+	</div>
+</div>
+<div class="titlebox spacing headerlinks two">
+	<div>
+		<a class="shade" href="#!" onclick="login()"><img src="/media/login.png" /> <span id="username">Login</span></a>
+		<a class="shade" href="/about"><img src="/media/info.png" /> About</a>
+	</div>
+</div>
+	</div>
+	<div class="listingcontainer">
+		<div class="navbox">
+			<a href="/page?p=1" class="btn">Browse videos</a>
+			<div class="pullright">
+				
+			</div>
+			<div class="clear"></div>
+		</div>
+		<noscript>
+Please enable JavaScript.
+</noscript>
+
+<style>
+.codeBox {
+	border-radius: 5px;
+	background: #333;
+	padding: 10px;
+	color: #fff;
+	display: inline-block;
+}
+.codeBoxActive {
+	background: #663;
+	font-weight: bold;
+}
+.badgeImportant {
+	padding: 2px 5px;
+	color: #fff;
+	font-weight: bold;
+	background: #f65;
+	border-radius: 2px;
+}
+.fineprint {
+	color: #888;
+	font-size: smaller;
+	font-style: italic;
+}
+.infoboxHighlight {
+	transition: background 1.5s;
+}
+#od_step2 ol li {
+	margin: 5px 0;
+}
+</style>
+
+<div id="pre-login">
+</div>
+<div id="content" style="display:none;">
+
+	<h2>OneDrive Verification</h2>
+
+	<br><br>
+
+	<div id="verification_state"></div>
+	
+	<br><br>
+
+	<b>Set up OneDrive access in this browser</b><br>
+	<div id="verification_box" class="infobox infoboxHighlight">
+		<div id="od_step0">
+			<i>Click "Set up" below to begin the verification process to gain access to the OneDrive share.</i>
+			<br>
+			<br>
+			<div class="fuckingBigassButton" onclick="odSetupBegin()">
+				Set up
+			</div>
+		</div>
+		<div id="od_step1" style="display:none;">
+			<img src="/media/loading.gif">
+			<br><br>
+			<b>Please wait...</b>
+			<br><br>
+			<i>This may take a few seconds.</i>
+		</div>
+		<div id="od_step2" style="display:none;">
+			<i>Please <u>precisely</u> follow these steps:</i> 
+			<br>
+			<br>
+			
+			<ol>
+				<li>Open <a href="#!" target="_blank" class="shade" id="share_link" onclick="odSetupCodefetch()">this link</a> <i>(opens in new tab)</i></li>
+				<li style="display:none;" id="hintClearCookies"><span style="color:#fa0;">Clear cookies for the page you just opened, close it, and re-open the link from step 1.</span></li>
+				<li>Click <b>Send Code</b> and return to this tab</li>
+				<li>copy &amp; enter the following verification code:<br>
+					<div class="codeBox" id="code_box">
+						<span id="code_hint" style="font-size: small;">
+							<i style="opacity:0.5;">(code not yet availabe)</i>
+						</span>
+					</div>
+				</li>
+				<li><span class="badgeImportant">IMPORTANT!</span> check the "Keep me signed in" checkbox</li>
+				<li>Click <b>Verify</b></li>
+				<li>After completing all steps, click <b>Done</b> below</li>
+			</ol>
+			<br>
+			<button type="button" onclick="odSetupComplete()">Done</button>
+			
+		</div>
+		<div id="od_step3" style="display:none;">
+			<b>Verification complete!</b><br>
+			You should now have access to the OneDrive folders automatically shared with you, and OneDrive video embeds should now work.<br>
+			<i>You can close the OneDrive tab now.</i>
+		</div>
+	</div>
+	
+	<br>
+	<br>
+	
+	<div class="fineprint">
+		Note: The state of your verification is determined with the help of a cookie.<br>
+		If you've recently cleared cookies for deadmau5archive.cc, the information displayed on this page may be inaccurate.
+	</div>
+
+
+</div>
+
+<script src="/media/onedrive.js"></script>
+
+
+	</div>
+</body>
+</html>
