@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
-	<link rel="stylesheet" href="/media/style.css?nc=1681923009">
+	<link rel="stylesheet" href="/media/style.css?nc=1683565038">
 	<script src="/media/api.js" type="text/javascript"></script>
 	
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
@@ -50,7 +50,7 @@
 		</div>
 		<h3>About</h3>
 <br>
-<span>
+<div>
 	&gt; About Website Text Goes Here &lt;<!-- HAHAHAHAH FUNNY RIGHT --><br>
 	<br>
 	On this page, you can find reuploads of deadmau5 livestreams (from <a target="_blank" href="https://www.twitch.tv/deadmau5" class="shade">twitch</a>, <a target="_blank" href="https://mixer.com/deadmau5" class="shade">mixer</a> and <a target="_blank" href="https://mau5trap.tv" class="shade">mau5trap.tv</a>).<br>
@@ -62,28 +62,25 @@
 	mau5trap.tv, Joel's own streaming platform he had for a while, didn't even have VODs, but I managed to record the streams anyway.<br>
 	Before mixer and mau5trap.tv, Joel was streaming on twitch. Currently, older VODs on twitch are still online, but should they ever decide to delete them, they're backed up here as well.<br>
 	Currently, Joel is back on Twitch, but newer streams aren't saved at all, because Joel has currently turned off the VOD feature.<br>
-	<br>
-	
-</span>
+</div>
+
+<br><br>
+
 <h3>Stats</h3>
 <br>
-<span>
-	There are currently <b>1328</b> videos archived on this page.<br>
+<div id="stats_loading">
+<i>stats are loading...</i>
+</div>
+<div id="stats_loaded" style="display:none;">
+	There are currently <b id="stat_video_count"></b> videos archived on this page.<br>
 	By platform:
-	<ul style="padding-left:20px;">
-		<li>Twitch: <b>1041</b></li>
-		<li>Mixer: <b>212</b></li>
-		<li>Mau5trap.tv: <b>75</b></li>
+	<ul id="stat_platform_count" style="padding-left:20px;">
+		
 	</ul>
-	This is a total of <b>209.999 days</b> of video material!<br>
-	<!--All the twitch videos collectively are about <b>X TB</b> big in the highest resolution. 
-	And about <b>1.838 TB</b> for mixer.<br>
-	
-	THIS IS OUTDATED!!!
-	
-	-->
-	<br>
-</span>
+	This is a total of <b id="stat_runtime_days"></b> days of video material!<br>
+</div>
+
+<br><br>
 
 <h3>Link conversion guide</h3>
 <br>
@@ -126,7 +123,8 @@ padding-right: 16px;
 <br>
 <i>Some links may redirect to another page within the archive. <br>
 deadmau5 never streamed on YouTube but what I mean by converting YouTube links is that when you have a YouTube link to a video from the archive channel, you can use this to get to the respective archive video page.</i> <br>
-<br>
+
+<br><br>
 
 <h3>Usage etiquette</h3>
 <br>
@@ -144,16 +142,19 @@ Also, it's really not worth it anyway because mau5trap does actively scan YouTub
 Joel says:<br>
 IF YOU CREATE RIPS I WILL RIP OFF YOUR HEAD
 </div>
-</div><br><br>
+</div><br>
+
+<br>
 
 <b>Crediting</b><br>
 If you create stream clips/moments etc. on your channel taken from the archive, feel free! I love deadmau5 clips.<br>
 However, I am asking you to link to the original video you got it from please.<br>
-this is <u>not</u> because I care about exposure (I dont give a shit, all videos are unlisted anyway), it's just about not having the frustration of missing context if you want to watch more of a clip or want to know on what date something happened on stream or whatever. 
-yep, that is the reason.<br>(basically just like there's a "watch full vod" link on twitch for clips)<br>
+this is <u>not</u> because I care about exposure (I dont give a shit, all videos are unlisted anyway), it's just about not having the frustration of missing context if you want to watch more of a clip or want to know on what date something happened on stream or whatever. <br>
+(basically just like there's a "watch full vod" link on twitch for clips)<br>
 DECLARE YOUR SOURCES PEOPLE IT'S NOT THAT HARD!<BR>
-yes i'm looking at you mau5freaks<br>
-<br>
+thank you (: <br>
+
+<br><br>
 
 <h3>Discord</h3>
 <br>
@@ -167,7 +168,9 @@ we have a discord server dedicated to the archive, feel free to join:<br><br>
 Join here: <a target="_blank" href="https://discord.gg/72xjgGe6zx" class="shade">https://discord.gg/72xjgGe6zx</a><br>
 <i>We got webhooks and updates for the archive, and other nerds interested in joels streams (: </i>
 </div>
-</div><br><br>
+</div><br>
+
+<br><br>
 
 <h3>Contact</h3>
 <br>
@@ -177,12 +180,13 @@ The easiest way to reach me is via discord.<br>
 Join the deadmau5archive discord here: <a target="_blank" href="https://discord.gg/72xjgGe6zx" class="shade">https://discord.gg/72xjgGe6zx</a><br>
 Then dm <b>anna</b><br><br>
 
-or alternatively:
+or alternatively:<br>
+<br>
 
 <ul style="padding-left:20px;">
 <li style="margin-bottom:5px;">
-	Use this form:<br>
-	<a style="margin-top:5px;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeDqJf4Rf8QNpDkPqZAfgyD7R18DFhYP-vVHy8VD62IgzQzCg/viewform" class="btn">Report a problem / Feedback</a>
+	Use this form:
+	<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeDqJf4Rf8QNpDkPqZAfgyD7R18DFhYP-vVHy8VD62IgzQzCg/viewform" class="shade">Report a problem / Feedback</a>
 </li>
 <li style="margin-bottom:5px;">
 Write me an email to <a href="mailto:deadmau5streamarchive@gmail.com?subject=deadmau5archive.github.io" class="shade"><i>deadmau5streamarchive@gmail.com</i></a><br>
@@ -193,7 +197,8 @@ Leave a comment on the YouTube channel's <i><a target="_blank" href="https://www
 </ul>
 <br>
 <i>(again, discord is the fastest way, I check gmail/youtube way less frequently)</i><br>
-<br>
+
+<br><br>
 
 <h3>Imprint stuff</h3>
 <br>
@@ -206,17 +211,85 @@ All rights related to the video content belong to Joel Zimmerman (deadmau5).<br>
 My uploads are never and will never be monetized. If ads are displayed to you, they're placed by copyright holders that claimed the video or by YouTube.<br>
 None of this money goes to me. It is not my intent to profit off of this, i just want to archive this content and make it available to those that are interested.<br>
 
-<br>
+<br><br>
+
 <h3>Updates &amp; Changelog</h3>
 <br>
 <b>Latest refresh</b><br>
-The whole website was last built at <i>2023-04-19 16:50:09 UTC</i>.<br>
+<span id="stat_last_update"></span>
+The whole website was last built at <i>2023-05-08 16:57:18 UTC</i>.<br>
 You can check the page history on the project's <a target="_blank" href="https://github.com/deadmau5archive/deadmau5archive.github.io/commits/master" class="shade">Github page</a>.<br>
 <br>
 <b>Changelog</b><br>
 There isn't a definitve changelog but your best bet is probably to join the <a target="_blank" href="https://discord.gg/72xjgGe6zx" class="shade">discord</a> and have a look at the <a target="_blank" href="https://discord.com/channels/725715353879183380/801156934904053810/801161450076110908" class="shade">#updates</a> channel.<br>
 
 <br><br>
+
+<h3 id="licenses">Licenses</h3>
+<br>
+
+<b id="license-ytvpc">youtube-video-player-clone</b> by <i>WebDevSimplified</i>
+&ndash;
+<a class="shade" href="https://github.com/WebDevSimplified/youtube-video-player-clone">Source</a><br>
+<br>
+<pre>
+MIT License
+
+Copyright (c) 2022 WebDevSimplified
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</pre>
+
+<br><br>
+
+<h3>Thank you ❤️</h3>
+<br>
+I would like to thank the following services and/or people for their contributions in making the archive possible:<br>
+<br>
+<ul>
+	<li>
+		<b>GitHub</b> <br>
+		For their GitHub Pages service especially, which is hosting this site (in part). For free!
+	</li>
+	<li>
+		<b>CloudFlare</b> <br>
+		For caching, proxying, DNSing and whatever else you do <a class="shade" href="https://cdn.discordapp.com/attachments/725715353879183383/1080865612152197211/makesweet-fq1hk4.gif">&lt;3</a> (also for free!)
+	</li>
+	<li>
+		<b>Fluster Cluck</b> <br>
+		For providing exorbitant amounts of OneDrive storage to host a downloadable version and backup of all the videos.
+	</li>
+	<li>
+		<b>bdan</b> <br>
+		For providing the shorthand domain alias <i>dm5a.cc</i>!
+	</li>
+	<li>
+		Everyone that's contributed ideas, feedback, helped with recovering lost or broken recordings or is just using the site.
+	</li>
+</ul>
+
+<br><br>
+
+<script>
+function capitalizeFirstLetter(t){return t.charAt(0).toUpperCase()+t.slice(1)}function slightlyPrettilyFormattedDateString(t){var e=new Date(parseInt(1e3*t));function a(t){return t<10?"0"+t:t}return e.getUTCFullYear()+"-"+a(e.getUTCMonth()+1)+"-"+a(e.getUTCDate())+" "+a(e.getUTCHours())+":"+a(e.getUTCMinutes())+":"+a(e.getUTCSeconds())+" UTC"}getStats(t=>{document.getElementById("stat_video_count").textContent=t.video_count;var e,a=t.runtime_total/parseFloat(86400);for(var n in document.getElementById("stat_runtime_days").textContent=Math.round(100*a)/parseFloat(100),t.platform_count){var r=t.platform_count[n],i=capitalizeFirstLetter(n);document.getElementById("stat_platform_count").innerHTML+="<li>"+i+": <b>"+r+"</b></li>"}document.getElementById("stats_loading").style.display="none",document.getElementById("stats_loaded").style.display="block";var l=slightlyPrettilyFormattedDateString(t.data_updated);document.getElementById("stat_last_update").innerHTML="The video database was last refreshed on <i>"+l+"</i>.<br>"});
+</script>
+
 	</div>
 </body>
 </html>
