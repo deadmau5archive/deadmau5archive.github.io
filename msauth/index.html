@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>deadmau5 stream archive</title>
-	<link rel="stylesheet" href="/media/style.css?nc=1694502819">
+	<link rel="stylesheet" href="/media/style.css?nc=1734570207">
 	<script src="/media/api.js" type="text/javascript"></script>
 	
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
@@ -55,7 +55,7 @@ Please enable JavaScript.
 </noscript>
 
 <script>
-var loginTarget="https://idp.deadmau5archive.cc/auth/";function loginCallback(e){if(e){var a=window.location.search,n=new URLSearchParams(a);n.has("d")&&n.has("ds")?getIdpToken(e=>{var a=loginTarget+"?d="+encodeURIComponent(n.get("d"))+"&ds="+n.get("ds")+"&t="+encodeURIComponent(e.token)+"&ts="+e.signature;window.location.href=a}):window.location.href="/"}else promptLogin()}function promptLogin(e=null){document.getElementById("headerlinks").style.display="none",showLoginPane("please log in to continue",loginCallback,{prefillUsername:e,closeable:!1,popupMode:!0,canRegister:!1})}waitforSession(()=>{if(session)loginCallback(!0);else{var e=null,a=window.location.search,n=new URLSearchParams(a);n.has("username")&&(e=n.get("username").trim().toLowerCase()),promptLogin(e)}});
+var loginTarget="https://dm5a-idp.2n.cx/auth/";function loginCallback(e){if(e){var a=window.location.search,n=new URLSearchParams(a);n.has("d")&&n.has("ds")?getIdpToken(e=>{var a=loginTarget+"?d="+encodeURIComponent(n.get("d"))+"&ds="+n.get("ds")+"&t="+encodeURIComponent(e.token)+"&ts="+e.signature;window.location.href=a}):window.location.href="/"}else promptLogin()}function promptLogin(e=null){document.getElementById("headerlinks").style.display="none",showLoginPane("please log in to continue",loginCallback,{prefillUsername:e,closeable:!1,popupMode:!0,canRegister:!1})}waitforSession(()=>{if(session)loginCallback(!0);else{var e=null,a=window.location.search,n=new URLSearchParams(a);n.has("username")&&(e=n.get("username").trim().toLowerCase()),promptLogin(e)}});
 </script>
 	</div>
 </body>
